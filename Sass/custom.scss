@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700&family=Montserrat+Alternates:wght@300;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+$font-family-base: "Manrope", sans-serif;
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+.navbar {
+  justify-content: space-between;
+}
+
+.th-fit {
+  text-align: center;
+}
+
+.td-fit {
+  width: 0.5em;
+}

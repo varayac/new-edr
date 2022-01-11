@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Office | Products</title>
+    <link rel="stylesheet" href="css/custom.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="/">
+            <i class="bi bi-building"> </i>Your Office</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/users.html">Users</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="/products.html"
+                  >Products</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/purchases.html">Purchases</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/sales.html">Sales</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login.html">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div class="text-center py-4">
+        <h1 class="display-6">Products List</h1>
+      </div>
+
+      <table class="table table-bordered table-sm">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Code</th>
+            <th scope="col">Product</th>
+            <th scope="col">Price</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Created by</th>
+            <th scope="col">Update at</th>
+            <th scope="col" colspan="2" class="th-fit">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>o098-543</td>
+            <td>Tinta Torner</td>
+            <td>$16.990</td>
+            <td>87</td>
+            <td>08-01-2022</td>
+            <td>08-01-2022</td>
+            <td class="td-fit py-1">
+              <button
+                data-bs-toggle="modal"
+                data-bs-target="#editUserModal"
+                class="btn btn-dark btn-sm btn-md"
+              >
+                <i class="bi bi-pencil"></i>
+              </button>
+            </td>
+            <td class="td-fit py-1">
+              <button class="btn btn-danger btn-sm">
+                <i class="bi bi-trash"></i>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>e021-237</td>
+            <td>Keyboards</td>
+            <td>$16.990</td>
+            <td>87</td>
+            <td>08-01-2022</td>
+            <td>08-01-2022</td>
+            <td class="td-fit py-1">
+              <button
+                data-bs-toggle="modal"
+                data-bs-target="#editUserModal"
+                class="btn btn-dark btn-sm btn-md"
+              >
+                <i class="bi bi-pencil"></i>
+              </button>
+            </td>
+            <td class="td-fit py-1">
+              <button class="btn btn-danger btn-sm">
+                <i class="bi bi-trash"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <button
+          class="btn btn-dark"
+          data-bs-toggle="modal"
+          data-bs-target="#newUserModal"
+        >
+          New product
+        </button>
+      </div>
+    </main>
+
+    <!-- MODAL NEW PRODUCT-->
+    <div class="modal fade" id="newUserModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Add new product</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Product Name"
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Product Code"
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="Price $$"
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="Amount"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Add item</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL EDIT PRODUCT -->
+    <div class="modal fade" id="editUserModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit Product</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Product Name"
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Product Code"
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="Price $$"
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="Amount"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-dark w-100">Edit Item</button>
+            <button
+              type="button"
+              class="btn btn-secondary w-100"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/bootstrap.min.js"></script>
+  </body>
+</html>
